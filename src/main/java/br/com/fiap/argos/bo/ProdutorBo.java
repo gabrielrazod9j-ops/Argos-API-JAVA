@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.List;
 
+//criei o service porque senão eu precisaria instanciar os objetos, com o service, quem cria o objeto é o springboot
 @Service
 public class ProdutorBo {
 

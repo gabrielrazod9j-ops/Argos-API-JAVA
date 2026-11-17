@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.List;
 
+//criei o service porque senão eu precisaria instanciar os objetos, com o service, quem cria o objeto é o springboot
 @Service
 public class PlantioBo {
 
@@ -36,7 +37,7 @@ public class PlantioBo {
         );
     }
 
-    // Inserir um plantio na propriedade (POST /propriedades/{id}/plantios)
+    // Inserir um plantio na propriedade
     public Plantio inserirBo(int propriedadeId, PlantioDTO dto) throws SQLException, ExcecoesConexao {
         Propriedade propriedade = propriedadeBo.buscarPorIdBo(propriedadeId);
         validarArea(propriedade, dto, 0);
@@ -49,7 +50,7 @@ public class PlantioBo {
         return plantioDAO.selecionar();
     }
 
-    // Selecionar os da propriedade (GET /propriedades/{id}/plantios)
+    // Selecionar os da propriedade
     public List<Plantio> selecionarPorPropriedadeBo(int propriedadeId) throws SQLException, ExcecoesConexao {
         propriedadeBo.buscarPorIdBo(propriedadeId);
         return plantioDAO.selecionarPorPropriedade(propriedadeId);
