@@ -77,12 +77,7 @@ argos-api-java/
 
 Usuário e senha nunca ficam no código nem no GitHub.
 
-## Deploy no Render
 
-1. Suba o projeto para o GitHub (sem a pasta `target`).
-2. Render → **New → Web Service** → escolha o repositório → Language: **Docker**.
-3. Em **Environment**, crie as variáveis `DB_USUARIO` e `DB_SENHA`.
-4. O Render monta a imagem pelo `Dockerfile` (multi-stage: um estágio compila com Maven, o outro só roda o .jar) e publica a API.
 
 | Variável | Para que serve |
 |---|---|
