@@ -88,6 +88,7 @@ public class PropriedadeDAO {
         }
     }
 
+    //transforma cada linha do banco em objeto, usado pelo selecionar e selecionarPor e buscarPorId para não repetir
     private List<Propriedade> consultar(String sql, Integer parametro) throws SQLException, ExcecoesConexao {
         List<Propriedade> lista = new ArrayList<>();
         try (Connection minhaConexao = new ConexaoFactory().conexao()) {

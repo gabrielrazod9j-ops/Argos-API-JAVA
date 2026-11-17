@@ -59,7 +59,8 @@ public class PlantioDAO {
         return lista.isEmpty() ? null : lista.get(0);
     }
 
-    // RN01: soma a area dos plantios que ainda nao foram colhidos.
+    // regra de negocio:
+    // soma a area dos plantios que ainda nao foram colhidos.
     // ignorarId tira da conta o plantio que esta sendo atualizado (no PUT).
     public double somarAreaPlantada(int propriedadeId, int ignorarId) throws SQLException, ExcecoesConexao {
         double soma;
@@ -108,6 +109,7 @@ public class PlantioDAO {
         }
     }
 
+    //transforma cada linha do banco em objeto, foi feio para não repetir o codigo acima denovo
     private List<Plantio> consultar(String sql, Integer parametro) throws SQLException, ExcecoesConexao {
         List<Plantio> lista = new ArrayList<>();
         try (Connection minhaConexao = new ConexaoFactory().conexao()) {

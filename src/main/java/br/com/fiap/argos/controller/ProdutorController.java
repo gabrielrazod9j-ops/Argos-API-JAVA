@@ -27,7 +27,7 @@ public class ProdutorController {
         this.propriedadeBo = propriedadeBo;
     }
 
-    // Inserir -> 201 + Location
+    // Inserir : 201
     @PostMapping
     public ResponseEntity<Produtor> inserirRs(@Valid @RequestBody ProdutorDTO dto) throws SQLException, ExcecoesConexao {
         Produtor novo = produtorBo.inserirBo(dto);
@@ -35,26 +35,26 @@ public class ProdutorController {
         return ResponseEntity.created(location).body(novo);
     }
 
-    // Selecionar -> 200
+    // Selecionar : 200
     @GetMapping
     public ResponseEntity<List<Produtor>> selecionarRs() throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(produtorBo.selecionarBo());
     }
 
-    // Buscar por id -> 200 ou 404
+    // Buscar por id : 200 ou 404
     @GetMapping("/{id}")
     public ResponseEntity<Produtor> buscarPorIdRs(@PathVariable int id) throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(produtorBo.buscarPorIdBo(id));
     }
 
-    // Atualizar -> 200, 400, 404 ou 409
+    // Atualizar : 200, 400, 404 ou 409
     @PutMapping("/{id}")
     public ResponseEntity<Produtor> atualizarRs(@PathVariable int id, @Valid @RequestBody ProdutorDTO dto)
             throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(produtorBo.atualizarBo(id, dto));
     }
 
-    // Deletar -> 204, 404 ou 409
+    // Deletar : 204, 404 ou 409
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarRs(@PathVariable int id) throws SQLException, ExcecoesConexao {
         produtorBo.deletarBo(id);

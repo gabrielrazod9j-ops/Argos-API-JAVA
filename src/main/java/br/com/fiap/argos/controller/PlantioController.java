@@ -21,26 +21,26 @@ public class PlantioController {
         this.plantioBo = plantioBo;
     }
 
-    // Selecionar -> 200
+    // Selecionar : 200
     @GetMapping
     public ResponseEntity<List<Plantio>> selecionarRs() throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(plantioBo.selecionarBo());
     }
 
-    // Buscar por id -> 200 ou 404
+    // Buscar por id : 200 ou 404
     @GetMapping("/{id}")
     public ResponseEntity<Plantio> buscarPorIdRs(@PathVariable int id) throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(plantioBo.buscarPorIdBo(id));
     }
 
-    // Atualizar -> 200, 400, 404 ou 409
+    // Atualizar : 200, 400, 404 ou 409
     @PutMapping("/{id}")
     public ResponseEntity<Plantio> atualizarRs(@PathVariable int id, @Valid @RequestBody PlantioDTO dto)
             throws SQLException, ExcecoesConexao {
         return ResponseEntity.ok(plantioBo.atualizarBo(id, dto));
     }
 
-    // Deletar -> 204 ou 404
+    // Deletar : 204 ou 404
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarRs(@PathVariable int id) throws SQLException, ExcecoesConexao {
         plantioBo.deletarBo(id);

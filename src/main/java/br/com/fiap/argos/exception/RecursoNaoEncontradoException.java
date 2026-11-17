@@ -1,6 +1,6 @@
 package br.com.fiap.argos.exception;
 
-// Id que nao existe no banco -> 404
+// serve para quando o id pedido não existir no banco, ai retorna o erro 404
 public class RecursoNaoEncontradoException extends RuntimeException {
 
     public RecursoNaoEncontradoException(String mensagem) {

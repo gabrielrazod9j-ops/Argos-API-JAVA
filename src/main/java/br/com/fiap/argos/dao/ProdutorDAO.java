@@ -76,7 +76,7 @@ public class ProdutorDAO {
         return produtor;
     }
 
-    // Verifica se o telefone ja e de outro produtor (RN02)
+    // regra de negocio: verifica se o telefone ja é de outro produtor
     public boolean telefoneEmUso(String telefone, int ignorarId) throws SQLException, ExcecoesConexao {
         boolean emUso;
         try (Connection minhaConexao = new ConexaoFactory().conexao()) {
@@ -126,6 +126,7 @@ public class ProdutorDAO {
         }
     }
 
+    //é para pegar o id do produtor da sequence, que vira o id do novo produtor
     private int proximoId(Connection minhaConexao) throws SQLException {
         PreparedStatement stmt = minhaConexao.prepareStatement("SELECT sq_tb_produtor.NEXTVAL FROM dual");
         ResultSet rs = stmt.executeQuery();
@@ -136,7 +137,7 @@ public class ProdutorDAO {
         return id;
     }
 
-    // Converte a linha do banco em objeto
+    // Converte a linha do banco em objeto produtor, e é usado pelo selecionar e buscar por id para não repetir o codigo.
     private Produtor montar(ResultSet rs) throws SQLException {
         Produtor produtor = new Produtor();
         produtor.setId(rs.getInt("cd_produtor"));
