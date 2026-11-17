@@ -15,8 +15,8 @@ FIAP · Global Solution 2026/2 · CitizenTech · Disciplina: Domain Driven Desig
 
 ## Links
 
-- Repositório (GitHub): _preencher_
-- API publicada no Render: _preencher_
+- Repositório (GitHub): está no pdf
+- API publicada no Render: está no pdf
 - Vídeo (YouTube não listado): _preencher_
 
 ## A solução
