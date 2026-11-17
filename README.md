@@ -170,4 +170,3 @@ Método não aceito → 405. Erro inesperado → 500.
 ## Documentação
 
 - `docs/Argos_API_Java_Documentacao.pdf`: solução, diagrama de classes, DER, endpoints, pacotes, validações e deploy.
-- `docs/Argos-API.postman_collection.json`: coleção com todas as rotas para o Postman ou Insomnia.
