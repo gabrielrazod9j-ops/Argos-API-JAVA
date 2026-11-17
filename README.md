@@ -72,9 +72,7 @@ argos-api-java/
 2. Crie as variáveis de ambiente `DB_USUARIO` e `DB_SENHA`.
    No IntelliJ: **Run → Edit Configurations → Environment variables**: `DB_USUARIO=seu_rm;DB_SENHA=sua_senha`.
 3. Rode a classe `ArgosApiApplication`.
-4. Teste no Postman ou Insomnia: `GET http://localhost:8080/produtores`
-   (ou importe `docs/Argos-API.postman_collection.json`, com todas as rotas na ordem).
-
+4. Teste no Postman ou Insomnia: `GET http://localhost:8080/produtores`.
 Usuário e senha nunca ficam no código nem no GitHub.
 
 
