@@ -46,10 +46,10 @@ argos-api-java/
 │   ├── dto/          ProdutorDTO, PropriedadeDTO, PlantioDTO
 │   ├── dao/          ProdutorDAO, PropriedadeDAO, PlantioDAO
 │   ├── bo/           ProdutorBo, PropriedadeBo, PlantioBo
-│   ├── controller/   ProdutorController, PropriedadeController, PlantioController
+│   ├── controller/   ProdutorController, PropriedadeController, PlantioController, CorsConfig
 │   ├── exception/    RecursoNaoEncontradoException, RegraNegocioException, ExcecoesConexao
-│   ├── handler/      GlobalExceptionHandler, Erro
-│   └── config/       CorsConfig
+│   └── handler/      GlobalExceptionHandler, Erro
+│   
 ├── Dockerfile
 └── pom.xml
 ```
